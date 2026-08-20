@@ -1,0 +1,11 @@
+{
+  "name": "claraconverts",
+  "description": "Install the ClaraConverts AI conversion agent widget on a website, and connect to the ClaraConverts provisioning MCP server for pricing, free trials, and account management.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaraConverts"
+  },
+  "homepage": "https://claraconverts.com",
+  "repository": "https://github.com/cognicores/claraconverts-agents",
+  "license": "Apache-2.0"
+}

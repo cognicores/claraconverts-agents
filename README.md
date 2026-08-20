@@ -2,7 +2,13 @@
 
 Agent tooling for ClaraConverts — 24/7 AI that turns website visitors into customers. agents.txt, an install Skill, and MCP servers for tool access.
 
-This repo mostly points at claraconverts.com rather than duplicating it — the one exception is [`install-clara-widget/SKILL.md`](./install-clara-widget/SKILL.md), mirrored here because some Skill marketplaces crawl the repo directly rather than following a link. [claraconverts.com/skills/install/SKILL.md](https://claraconverts.com/skills/install/SKILL.md) is the canonical source; if the two ever disagree, that one wins.
+This repo mostly points at claraconverts.com rather than duplicating it — the two exceptions are `install-clara-widget/SKILL.md` and `skills/install-clara-widget/SKILL.md` (identical content, two locations — some Skill marketplaces crawl a bare `<name>/SKILL.md` folder, Claude Code plugins expect it under `skills/`). [claraconverts.com/skills/install/SKILL.md](https://claraconverts.com/skills/install/SKILL.md) is the canonical source; if any of these disagree, that one wins.
+
+This repo is also a self-hosted [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces) — installing the plugin registers both the Skill and the provisioning MCP server in one step:
+```
+/plugin marketplace add cognicores/claraconverts-agents
+/plugin install claraconverts@claraconverts-agents
+```
 
 ## For AI agents
 

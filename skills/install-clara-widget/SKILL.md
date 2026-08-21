@@ -31,14 +31,14 @@ After installing, confirm the Clara chat bubble appears on every page, not just 
 
 ## If the user has no account yet
 
-Call the ClaraConverts provisioning MCP server (`MCP:` in `https://claraconverts.com/agents.txt`) with the `create_trial_tenant` tool — it creates a real, free, no-card trial tenant and returns a working embed snippet plus a bearer token for follow-up calls. From there:
+Call the ClaraConverts provisioning MCP server (`MCP:` in `https://claraconverts.com/agents.txt`) with the `create_trial_tenant` tool — it creates a real, free, no-card trial tenant and returns a working embed snippet, an agents.txt snippet for the site itself, and a `secret_key` needed for every step after this one. Pass `secret_key` as an `Authorization: Bearer <secret_key>` header if your transport can set one; if it can't (e.g. a hosted chat connector that can only pass tool arguments, not headers), pass it as each tool's own `secret_key` argument instead — every gated tool below accepts either. From there:
 
-1. `create_trial_tenant` → get `public_key` (for the snippet) and `secret_key` (bearer token, shown once — save it)
-2. `get_embed_snippet` (bearer-authenticated) → the exact `<script>` tag to place, same placement rules as above
-3. `refresh_site_knowledge` (bearer-authenticated) — trials skip the crawl at creation to stay fast, so call this once so Clara actually knows about the business (can take up to a minute)
-4. `update_tenant_settings` (bearer-authenticated) — adjust display name, goal, brand color, widget position, or lead notification email at any time
-5. `configure_integration` (bearer-authenticated) — connect a booking/commerce/CRM provider from `list_integrations`; API-key providers connect immediately, OAuth providers return a `connect_url` a human must open and approve
-6. `get_upgrade_link` (bearer-authenticated) when the user is ready to convert the trial to a paid plan
+1. `create_trial_tenant` → get `public_key` (for the snippet) and `secret_key`
+2. `get_embed_snippet` → the exact `<script>` tag to place (same placement rules as above), plus an `agents_txt_snippet`. Publish that one at the ROOT of the same site as `/agents.txt` (same place `robots.txt` lives — not on claraconverts.com) so off-browser agents visiting the site can reach Clara's tools too. Optional, but recommended.
+3. `refresh_site_knowledge` — trials skip the crawl at creation to stay fast, so call this once so Clara actually knows about the business (can take up to a minute)
+4. `update_tenant_settings` — adjust display name, goal, brand color, widget position, or lead notification email at any time
+5. `configure_integration` — connect a booking/commerce/CRM provider from `list_integrations`; API-key providers connect immediately, OAuth providers return a `connect_url` a human must open and approve
+6. `get_upgrade_link` when the user is ready to convert the trial to a paid plan
 
 **You never need to tell the user how to reach Studio.** `create_trial_tenant` automatically emails the owner a dashboard login link the moment the trial is created — they discover it themselves, the same way every other Clara signup works. Don't invent or guess a Studio URL for them.
 

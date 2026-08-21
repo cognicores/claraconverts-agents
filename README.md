@@ -14,7 +14,9 @@ This repo is also a self-hosted [Claude Code plugin marketplace](https://code.cl
 
 - **Capability discovery:** [`agents.txt`](https://claraconverts.com/agents.txt) / [`agents.json`](https://claraconverts.com/agents.json) — the [agents-txt.com](https://agents-txt.com) standard.
 - **Install Skill:** [`install-clara-widget/SKILL.md`](./install-clara-widget/SKILL.md) (mirrored in this repo) — install the ClaraConverts widget on a website (Next.js, Astro, Nuxt, SvelteKit, WordPress, Webflow, Squarespace, Wix, Shopify, or plain HTML), or provision a free trial via the MCP server below if there's no account yet.
-- **Provisioning MCP server:** `https://claraconverts.com/mcp` (Streamable HTTP) — get pricing, list integrations, create a free 14-day no-card trial, manage it (settings, knowledge refresh, integrations), and upgrade — all via tool calls, no dashboard required.
+- **Provisioning MCP server:** `https://claraconverts.com/mcp` (Streamable HTTP) — get pricing, list integrations, create a free 14-day no-card trial, manage it (settings, knowledge refresh, integrations), and upgrade — all via tool calls, no dashboard required. Also listed on the [official MCP Registry](https://registry.modelcontextprotocol.io/?q=com.claraconverts) (`com.claraconverts/clara`) and [Smithery](https://smithery.ai/servers/claraconverts/clara).
+
+[![smithery badge](https://smithery.ai/badge/claraconverts/clara)](https://smithery.ai/servers/claraconverts/clara)
 - **Per-tenant MCP bridge:** `https://claraconverts.com/mcp/t/<public_key>` — lets an off-browser agent reach a specific site's Clara tools (lead capture, booking, commerce, etc.), the server-side counterpart to the in-browser [WebMCP](https://claraconverts.com/guide/agent-ready-website) surface.
 
 ## For humans

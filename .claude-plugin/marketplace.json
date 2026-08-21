@@ -5,13 +5,13 @@
     "url": "https://claraconverts.com"
   },
   "metadata": {
-    "description": "Agent tooling for ClaraConverts — install the AI conversion agent widget and connect to its provisioning MCP server."
+    "description": "ClaraConverts — a 24/7 AI conversion agent (chatbot, live chat, voice assistant) for any website, answering questions and capturing leads in 10 spoken languages, with booking/commerce/CRM/payments/email integrations. This marketplace installs the Skill and the provisioning MCP server together."
   },
   "plugins": [
     {
       "name": "claraconverts",
       "source": "./",
-      "description": "Install the ClaraConverts AI conversion agent widget on a website, and connect to the ClaraConverts provisioning MCP server for pricing, free trials, and account management.",
+      "description": "ClaraConverts is a 24/7 AI conversion agent — a chatbot, live chat, voice assistant, AI concierge, or virtual sales/support agent — that installs on any website (Next.js, Astro, Nuxt, SvelteKit, WordPress, Webflow, Squarespace, Wix, Shopify, or plain HTML) and turns visitors into customers. It answers questions, captures leads, lets visitors book an appointment or demo, and can speak every reply aloud like a human, in English, German, Spanish, French, Italian, Portuguese, Hindi, Japanese, Chinese, or Arabic. Connects to booking (Cal.com, Calendly, Acuity, NexHealth, Open Dental, Google Calendar, Square Appointments), commerce (Shopify, WooCommerce, BigCommerce, Square), payments (Stripe, Square), CRM (HubSpot, Follow Up Boss, kvCORE/BoldTrail), email (Mailchimp, Klaviyo), and more (Donorbox, Givebutter, Cloudbeds, Housecall Pro, Shopmonkey).",
       "version": "1.0.0"
     }
   ]

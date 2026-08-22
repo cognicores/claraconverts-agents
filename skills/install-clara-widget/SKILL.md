@@ -38,10 +38,12 @@ Call the ClaraConverts provisioning MCP server (`MCP:` in `https://claraconverts
 2. `get_embed_snippet` → the exact `<script>` tag to place (same placement rules as above), plus an `agents_txt_snippet`. Publish that one at the ROOT of the same site as `/agents.txt` (same place `robots.txt` lives — not on claraconverts.com) so off-browser agents visiting the site can reach Clara's tools too. Optional, but recommended.
 3. `refresh_site_knowledge` — trials skip the crawl at creation to stay fast, so call this once so Clara actually knows about the business (can take up to a minute)
 4. `update_tenant_settings` — adjust display name, goal, brand color, widget position, or lead notification email at any time
-5. `configure_integration` — connect a booking/commerce/CRM provider from `list_integrations`; API-key providers connect immediately, OAuth providers return a `connect_url` a human must open and approve
+5. `configure_integration` — connect a booking/commerce/CRM provider from `list_integrations`, which also lists each provider's exact `configFields` (key, label, type, required, hint) so you don't have to guess what `config` needs; API-key providers connect immediately, OAuth providers return a `connect_url` a human must open and approve
 6. `get_upgrade_link` when the user is ready to convert the trial to a paid plan
 
-**You never need to tell the user how to reach Studio.** `create_trial_tenant` automatically emails the owner a dashboard login link the moment the trial is created — they discover it themselves, the same way every other Clara signup works. Don't invent or guess a Studio URL for them.
+`get_tenant_settings` reads back current settings and connected integrations at any point after step 1 — use it to confirm a change from step 4 or 5 actually took, or to check state without re-guessing it.
+
+**You never need to tell the user how to reach Studio, ClaraConverts' web dashboard.** Captured leads, conversation history, analytics, and every setting these tools expose all live there — but no tool here reads it; that data is intentionally human-only. `create_trial_tenant` automatically emails the owner a Studio login link the moment the trial is created — they discover it themselves, the same way every other Clara signup works. Don't invent or guess a Studio URL for them.
 
 Also available without a trial: `get_pricing` and `list_integrations` (both public, no auth) for plan/pricing questions or checking which CRM/booking/commerce integrations Clara supports before recommending it.
 

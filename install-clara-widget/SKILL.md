@@ -36,7 +36,7 @@ Call the ClaraConverts provisioning MCP server (`MCP:` in `https://claraconverts
 
 1. `create_trial_tenant` with the site owner's real email as `owner_email` — ask the user for it; never invent one or use a placeholder. It may differ from the site's domain (e.g. a Gmail address for a site still being built). The owner's Studio login link goes there, and if that email bounces the trial is cancelled within minutes: later calls then return `trial_cancelled_email_undeliverable` — ask the user for a working address and create a new trial. → get `public_key` (for the snippet) and `secret_key`
 2. `get_embed_snippet` → the exact `<script>` tag to place (same placement rules as above), plus an `agents_txt_snippet`. Publish that one at the ROOT of the same site as `/agents.txt` (same place `robots.txt` lives — not on claraconverts.com) so off-browser agents visiting the site can reach Clara's tools too. Optional, but recommended.
-3. `refresh_site_knowledge` — trials skip the crawl at creation to stay fast, so call this once so Clara actually knows about the business (can take up to a minute)
+3. `refresh_site_knowledge` — trials skip the crawl at creation to stay fast, so call this once so Clara actually knows about the business (can take up to a minute). If the site isn't published yet (localhost, a preview URL, still being built), call `set_site_knowledge` with the pages' content instead so Clara can be tested before launch, then `refresh_site_knowledge` once it's live
 4. `update_tenant_settings` — adjust display name, goal, brand color, widget position, or lead notification email at any time
 5. `configure_integration` — connect a booking/commerce/CRM provider from `list_integrations`, which also lists each provider's exact `configFields` (key, label, type, required, hint) so you don't have to guess what `config` needs; API-key providers connect immediately, OAuth providers return a `connect_url` a human must open and approve
 6. `get_upgrade_link` when the user is ready to convert the trial to a paid plan
@@ -51,4 +51,4 @@ Also available without a trial: `get_pricing` and `list_integrations` (both publ
 
 1. Load the site in a browser.
 2. Confirm the chat bubble is visible (default: bottom-right).
-3. Send a test message and confirm Clara responds in context of the actual business (not a generic placeholder reply) — if she doesn't, the persona hasn't finished building yet; that happens automatically shortly after signup/trial creation.
+3. Send a test message and confirm Clara responds in context of the actual business (not a generic placeholder reply) — if she doesn't, she has no site knowledge yet: for a trial, run `refresh_site_knowledge` (live site) or `set_site_knowledge` (unpublished site); for a signup through the website it builds automatically shortly after signup.

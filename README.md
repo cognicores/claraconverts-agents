@@ -10,6 +10,11 @@ This repo is also a self-hosted [Claude Code plugin marketplace](https://code.cl
 /plugin install claraconverts@claraconverts-agents
 ```
 
+It is also a [Google Antigravity plugin](https://antigravity.google/docs/plugins) — same Skill and MCP server, installed with the `agy` CLI:
+```
+agy plugin install https://github.com/cognicores/claraconverts-agents
+```
+
 ## For AI agents
 
 - **Capability discovery:** [`agents.txt`](https://claraconverts.com/agents.txt) / [`agents.json`](https://claraconverts.com/agents.json) — the [agents-txt.com](https://agents-txt.com) standard.

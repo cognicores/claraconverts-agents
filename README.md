@@ -1,6 +1,6 @@
 # claraconverts-agents
 
-Agent tooling for ClaraConverts — 24/7 AI that turns website visitors into customers. agents.txt, an install Skill, and MCP servers for tool access.
+Agent tooling for ClaraConverts — Clara, an AI agent that website visitors talk to, out loud or by text, and that turns them into customers. agents.txt, an install Skill, and MCP servers for tool access.
 
 This repo mostly points at claraconverts.com rather than duplicating it — the two exceptions are `install-clara-widget/SKILL.md` and `skills/install-clara-widget/SKILL.md` (identical content, two locations — some Skill marketplaces crawl a bare `<name>/SKILL.md` folder, Claude Code plugins expect it under `skills/`). [claraconverts.com/skills/install/SKILL.md](https://claraconverts.com/skills/install/SKILL.md) is the canonical source; if any of these disagree, that one wins.
 
@@ -14,7 +14,7 @@ This repo is also a self-hosted [Claude Code plugin marketplace](https://code.cl
 
 - **Capability discovery:** [`agents.txt`](https://claraconverts.com/agents.txt) / [`agents.json`](https://claraconverts.com/agents.json) — the [agents-txt.com](https://agents-txt.com) standard.
 - **Install Skill:** [`install-clara-widget/SKILL.md`](./install-clara-widget/SKILL.md) (mirrored in this repo) — install the ClaraConverts widget on a website (Next.js, Astro, Nuxt, SvelteKit, WordPress, Webflow, Squarespace, Wix, Shopify, or plain HTML), or provision a free trial via the MCP server below if there's no account yet.
-- **Provisioning MCP server:** `https://claraconverts.com/mcp` (Streamable HTTP). **No API key or credential is needed to connect, or to call `get_pricing`, `list_integrations`, or `create_trial_tenant`** — leave any "API key" field on your MCP client blank; those three tools accept no auth at all. Get pricing, list integrations, create a free 14-day no-card trial, manage it (settings, knowledge refresh, integrations), and upgrade — all via tool calls, no dashboard required. Also listed on the [official MCP Registry](https://registry.modelcontextprotocol.io/?q=com.claraconverts) (`com.claraconverts/clara`), [Smithery](https://smithery.ai/servers/claraconverts/clara), and [mcpservers.org](https://mcpservers.org/servers/cognicores/claraconverts-agents).
+- **Provisioning MCP server:** `https://claraconverts.com/mcp` (Streamable HTTP). **No API key or credential is needed to connect, or to call `get_pricing`, `list_integrations`, or `create_trial_tenant`** — leave any "API key" field on your MCP client blank; those three tools accept no auth at all. Get pricing, list integrations, create a free no-card trial with every Pro feature, manage it (settings, knowledge refresh, integrations), and upgrade — all via tool calls, no dashboard required. Also listed on the [official MCP Registry](https://registry.modelcontextprotocol.io/?q=com.claraconverts) (`com.claraconverts/clara`), [Smithery](https://smithery.ai/servers/claraconverts/clara), and [mcpservers.org](https://mcpservers.org/servers/cognicores/claraconverts-agents).
 
 [![smithery badge](https://smithery.ai/badge/claraconverts/clara)](https://smithery.ai/servers/claraconverts/clara)
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/cognicores/claraconverts-agents)

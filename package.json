@@ -1,7 +1,7 @@
 {
   "name": "claraconverts",
   "version": "1.0.0",
-  "description": "Clara is an AI agent website visitors talk to, out loud or by text, that turns them into customers. Install it and start a free trial, no card needed.",
+  "description": "Add Clara to any website: an AI conversion agent (voice and text chatbot) that visitors talk to in 10 languages, and that turns them into customers. Includes the install Skill and the MCP server to start a free trial, no card needed.",
   "type": "module",
   "main": "./dsh/index.js",
   "exports": {

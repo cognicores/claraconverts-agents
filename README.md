@@ -1,6 +1,6 @@
 # claraconverts-agents
 
-Agent tooling for ClaraConverts — Clara, an AI agent that website visitors talk to, out loud or by text, and that turns them into customers. agents.txt, an install Skill, and MCP servers for tool access.
+Add Clara to any website: an AI conversion agent (voice and text chatbot) that visitors talk to in 10 languages. She answers from the site's own content and turns visitors into customers: they book, buy, sign up or leave their details. Free trial, no card needed. This repo has the install Skill, the MCP servers and agents.txt.
 
 This repo mostly points at claraconverts.com rather than duplicating it — the two exceptions are `install-clara-widget/SKILL.md` and `skills/install-clara-widget/SKILL.md` (identical content, two locations — some Skill marketplaces crawl a bare `<name>/SKILL.md` folder, Claude Code plugins expect it under `skills/`). [claraconverts.com/skills/install/SKILL.md](https://claraconverts.com/skills/install/SKILL.md) is the canonical source; if any of these disagree, that one wins.
 

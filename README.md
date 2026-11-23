@@ -2,7 +2,7 @@
 
 Add Clara to any website: an AI conversion agent (voice and text chatbot) that visitors talk to in 10 languages. She answers from the site's own content and turns visitors into customers: they book, buy, sign up or leave their details. Free trial, no card needed. This repo has the install Skill, the MCP servers and agents.txt.
 
-This repo mostly points at claraconverts.com rather than duplicating it — the two exceptions are `install-clara-widget/SKILL.md` and `skills/install-clara-widget/SKILL.md` (identical content, two locations — some Skill marketplaces crawl a bare `<name>/SKILL.md` folder, Claude Code plugins expect it under `skills/`). [claraconverts.com/skills/install/SKILL.md](https://claraconverts.com/skills/install/SKILL.md) is the canonical source; if any of these disagree, that one wins.
+This repo mostly points at claraconverts.com rather than duplicating it — the exceptions are `install-clara-widget/SKILL.md`, `skills/install-clara-widget/SKILL.md` and `claude-plugin/skills/install-clara-widget/SKILL.md` (identical content, three locations — some Skill marketplaces crawl a bare `<name>/SKILL.md` folder, plugins expect it under `skills/`, and the Claude Code plugin has its own folder). [claraconverts.com/skills/install/SKILL.md](https://claraconverts.com/skills/install/SKILL.md) is the canonical source; if any of these disagree, that one wins.
 
 This repo is also a self-hosted [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces) — installing the plugin registers both the Skill and the provisioning MCP server in one step:
 ```

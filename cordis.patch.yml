@@ -1,0 +1,10 @@
+# DeepSeek Harness bundle: the install Skill plus the provisioning MCP server.
+- insert:
+    - id: claraconverts-skill
+      name: claraconverts
+    - id: claraconverts-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: clara
+        transport: streamable-http
+        url: https://claraconverts.com/mcp

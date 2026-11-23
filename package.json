@@ -1,0 +1,44 @@
+{
+  "name": "claraconverts",
+  "version": "1.0.0",
+  "description": "Clara is an AI agent website visitors talk to, out loud or by text, that turns them into customers. Install it and start a free trial, no card needed.",
+  "type": "module",
+  "main": "./dsh/index.js",
+  "exports": {
+    ".": "./dsh/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dsh",
+    "skills",
+    "assets",
+    "cordis.patch.yml"
+  ],
+  "icon": "./assets/logo.png",
+  "keywords": [
+    "dsh-plugin",
+    "chatbot",
+    "voice-assistant",
+    "ai-agent",
+    "website",
+    "lead-capture",
+    "conversion",
+    "mcp"
+  ],
+  "author": "ClaraConverts (https://claraconverts.com)",
+  "homepage": "https://claraconverts.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cognicores/claraconverts-agents.git"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "dsh": ">=0.2.2-rc.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

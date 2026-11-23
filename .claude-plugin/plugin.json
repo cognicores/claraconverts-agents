@@ -7,11 +7,12 @@
       "url": "https://claraconverts.com/mcp"
     }
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "ClaraConverts"
   },
   "homepage": "https://claraconverts.com",
+  "privacyPolicyUrl": "https://claraconverts.com/privacy",
   "repository": "https://github.com/cognicores/claraconverts-agents",
   "license": "Apache-2.0"
 }

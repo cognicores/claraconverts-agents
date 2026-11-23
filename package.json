@@ -1,6 +1,6 @@
 {
   "name": "claraconverts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Add Clara to any website: an AI conversion agent (voice and text chatbot) that visitors talk to in 10 languages, and that turns them into customers. Includes the install Skill and the MCP server to start a free trial, no card needed.",
   "type": "module",
   "main": "./dsh/index.js",
@@ -10,13 +10,19 @@
     "./package.json": "./package.json"
   },
   "files": [
+    ".claude-plugin",
+    "claude-plugin",
+    ".antigravity-plugin",
+    "mcp_config.json",
     "dsh",
+    "cordis.patch.yml",
     "skills",
-    "assets",
-    "cordis.patch.yml"
+    "assets"
   ],
   "icon": "./assets/logo.png",
   "keywords": [
+    "claude-code-plugin",
+    "antigravity-plugin",
     "dsh-plugin",
     "chatbot",
     "voice-assistant",
@@ -24,7 +30,9 @@
     "website",
     "lead-capture",
     "conversion",
-    "mcp"
+    "mcp",
+    "mcp-server",
+    "agent-skills"
   ],
   "author": "ClaraConverts (https://claraconverts.com)",
   "homepage": "https://claraconverts.com",

@@ -17,7 +17,7 @@ agy plugin install https://github.com/cognicores/claraconverts-agents
 
 It is also a [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin — same Skill and MCP server, installed with the `dsh` CLI:
 ```
-dsh plugin --profile web add github:cognicores/claraconverts-agents
+dsh plugin --profile web add claraconverts
 ```
 
 ## For AI agents

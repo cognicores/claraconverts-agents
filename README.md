@@ -10,6 +10,12 @@ This repo is also a self-hosted [Claude Code plugin marketplace](https://code.cl
 /plugin install claraconverts@claraconverts-agents
 ```
 
+It is also a [Codex plugin](https://learn.chatgpt.com/docs/plugins) — same Skill and MCP server, installed with the `codex` CLI:
+```
+codex plugin marketplace add cognicores/claraconverts-agents
+codex plugin add claraconverts@claraconverts-agents
+```
+
 It is also a [Google Antigravity plugin](https://antigravity.google/docs/plugins) — same Skill and MCP server, installed with the `agy` CLI:
 ```
 agy plugin install https://github.com/cognicores/claraconverts-agents
